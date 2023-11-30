@@ -1,0 +1,17 @@
+{
+	"ulid": "01HGEGA71P8V48K9BGJ1V8T03Y",
+	"minTime": 1701216000000,
+	"maxTime": 1701223200000,
+	"stats": {
+		"numSamples": 286624,
+		"numSeries": 766,
+		"numChunks": 2978
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01HGEGA71P8V48K9BGJ1V8T03Y"
+		]
+	},
+	"version": 1
+}

@@ -22,8 +22,9 @@
   2. :green_book: [About](#about)
   3. :computer: [Run the project](#run)
   4. :toolbox: [Tools](#tools)
-  5.  :1234: [Versions](#versions)
-  6.  :robot: [Use of AI](#ia)
+  5. :clap: [Best Practices](#best-practices)
+  6.  :1234: [Versions](#versions)
+  7.  :robot: [Use of AI](#ia)
 
 <br/>
 
@@ -50,7 +51,13 @@ I must implement the knowledge acquired here in my projects and studies
 <a id="run"></a>
 ## :computer: Run the project
 
-Run the 'docker compose up' command (according to your 'docker compose' version) in the project's root directory:
+With `java 1.8` installed in your machine runs os directory `app`
+
+```bash
+mvn clean package
+```
+
+And run the 'docker compose up' command (according to your 'docker compose' version) in the project's root directory:
 ```bash
 $ docker compose up
 ```
@@ -83,6 +90,20 @@ $ docker compose up
   - [VsCode](https://code.visualstudio.com/)
   - [DBeaver](https://dbeaver.io/)
   - [Another Redis Desktop Manager](https://github.com/qishibo/AnotherRedisDesktopManager)
+
+
+<br/>
+
+[:arrow_heading_up: back to top](#index)
+
+---
+
+<a id="best-practices"></a>
+## :clap: Best Practices
+
+- [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+- [keep a changelog](https://keepachangelog.com/en/1.0.0/)
+
 
 
 <br/>
@@ -127,3 +148,13 @@ AI also helped in some research in this study by being used as a support tool; h
 Hire artists for commercial or more elaborate projects and Learn Ingenuity!
 
 [:arrow_heading_up: back to top](#index)
+
+---
+
+<!--
+    I NEED TO KILL THIS APACHE 'de merda!"
+        https://www.cyberciti.biz/faq/star-stop-restart-apache2-webserver/
+
+    multipart/form-data study
+        https://www.bing.com/search?q=O+que+%C3%A9+o+novo+Bing%3F&sp=-1&ghc=1&lq=1&pq=pode+me+fornecer+um+exemplo+usando+multipart%2Fform-data+e+enviando+um+html%2C+json+e+upload+de+arquivo%3Futilizando+chamada+curl&sc=2-124&qs=n&sk=&cvid=EAB9855A48BC414FAF0F8858F7687A0B&ghsh=0&ghacc=0&ghpl=&showconv=1&filters=wholepagesharingscenario%3A%22Conversation%22&shareId=dfcf626b-4299-4a2d-8884-4070a4021a84&shtc=0&shsc=Codex_ConversationMode&form=EX0050&shid=4e6956c0-b868-478f-8cf5-d2d20e312a18&shtp=GetUrl&shtk=cG9kZSBtZSBmb3JuZWNlciB1bSBleGVtcGxvIHVzYW5kbyBtdWx0aXBhcnQvZm9ybS1kYXRhIGUgZW52aWFuZG8gdW0gaHRtbCwganNvbiBlIHVwbG9hZCBkZSBhcnF1aXZvPwp1dGlsaXphbmRvIGNoYW1hZGEgY3VybA%3D%3D&shdk=QXF1aSBlc3TDoSB1bWEgcmVzcG9zdGEgcXVlIHJlY2ViaSB1c2FuZG8gbyBub3ZvIEJpbmcsIG8gcHJpbWVpcm8gbWVjYW5pc21vIGRlIHJlc3Bvc3RhIGRhIHBsYXRhZm9ybWEgQUkgZG8gbXVuZG8uIENsaXF1ZSBwYXJhIHZlciBhIHJlc3Bvc3RhIGNvbXBsZXRhIGUgZXhwZXJpbWVudGUgdm9jw6ogbWVzbW8u&shhk=l%2FGaJ2SsrzQms1Mw6jNiX0Z43IkIfjFeo7Kbe%2BmdIyU%3D&shth=OBFB.107AF8B2FB79BD01FFDCABA4D756224A
+-->
