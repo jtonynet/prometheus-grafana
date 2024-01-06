@@ -90,11 +90,12 @@ Local URLs:
 - Prometheus - http://localhost:9090/
 - AlertManager - http://localhost:9093/
 
+<!--
 [Import the corresponding JSON](https://grafana.com/docs/grafana/latest/dashboards/manage-dashboards/#import-a-dashboard) into your local Grafana after the proper installation of the project. The JSON file is located in [scripts/grafana-dashboards](./scripts/grafana-dashboards) and add prometheus URL `http://prometheus-forum-api:9090` on datasource connection `http://localhost:3000/connections/datasources/`
 
 <img src="./assets/images/screen_captures/prometheus-datasource-config.png">
+-->
 
-<br/>
 <br/>
 
 > :writing_hand: **Note**:
