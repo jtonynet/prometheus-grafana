@@ -44,6 +44,29 @@ I must implement the knowledge acquired here in my projects and studies
 
 <br/>
 
+Grafana Images:
+<img src="./assets/images/screen_captures/grafana-basic.png">
+<img src="./assets/images/screen_captures/grafana-red.png">
+<img src="./assets/images/screen_captures/grafana-use.png">
+
+Prometheus - Alerts Green (its OK):
+<img src="./assets/images/screen_captures/prometheus-alerts-green.png">
+
+Alertmanger - Alerts Green (its OK):
+<img src="./assets/images/screen_captures/alertmanager-alerts-green.png">
+
+ DB and Cache Down (its NOK):
+<img src="./assets/images/screen_captures/db-and-cache-down.png">
+
+Prometheus - Alerts Red (its NOK):
+<img src="./assets/images/screen_captures/prometheus-alerts-red.png">
+
+Alertmanger - Alerts RED (its NOK):
+<img src="./assets/images/screen_captures/alertmanager-alerts-red.png">
+
+Slack Receiving Alerts Red (its NOK):
+<img src="./assets/images/screen_captures/slack-alerts.png">
+
 [:arrow_heading_up: back to top](#index)
 
 ---
@@ -62,8 +85,38 @@ And run the 'docker compose up' command (according to your 'docker compose' vers
 $ docker compose up
 ```
 
+Local URLs:
+- Grafana - http://localhost:3000/ (user/pwd: admin - admin | admin - 12345)
+- Prometheus - http://localhost:9090/
+- AlertManager - http://localhost:9093/
+
+[Import the corresponding JSON](https://grafana.com/docs/grafana/latest/dashboards/manage-dashboards/#import-a-dashboard) into your local Grafana after the proper installation of the project. The JSON file is located in [scripts/grafana-dashboards](./scripts/grafana-dashboards) and add prometheus URL `http://prometheus-forum-api:9090` on datasource connection `http://localhost:3000/connections/datasources/`
+
+<img src="./assets/images/screen_captures/prometheus-datasource-config.png">
 
 <br/>
+<br/>
+
+> :writing_hand: **Note**:
+>
+> __Troubleshooting with [Docker Volumes](https://betterstack.com/community/questions/what-is-the-best-way-to-manage-permissions-for-docker-shared-volumes/)__
+> For the purpose of setting up the local environment, one might encounter issues with permissions in the `docker_data` folders, which stores the volumes of the components needed to run the environment. Does not grant it the necessary permissions to manage these volumes. The approach we are currently using to handle this is to run the following command in case you encounter an error on the first attempt of `docker compose up`:
+>```bash
+>sudo chmod -R 777 grafana/
+>sudo chmod -R 777 prometheus/
+>sudo chmod -R 777 alertmanager/
+>``` 
+
+<br/>
+
+
+To use the Slack integration as seen in the "About" section, it will be necessary to configure the [Incoming Webhook](https://api.slack.com/messaging/webhooks) and modify [alertmanager.yml](./alertmanager/alertmanager.yml), changing line 2 to the corresponding URL for message posting.
+
+
+```yml
+1   global:
+2    slack_api_url: 'YOUR-URL-SERVICE-HERE like: https://hooks.slack.com/services/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'
+```
 
 [:arrow_heading_up: back to top](#index)
 
@@ -84,6 +137,9 @@ $ docker compose up
   - [Docker compose v2.21.0](https://www.docker.com/)
   - [MySQL](https://www.mysql.com/)
   - [Redis](https://redis.io/)
+  - [Prometheus](https://prometheus.io/)
+  - [Grafana](https://grafana.com/)
+  - [Alertmanager](https://prometheus.io/docs/alerting/latest/alertmanager/)
 
 
 - GUIs:
@@ -103,7 +159,10 @@ $ docker compose up
 
 - [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 - [keep a changelog](https://keepachangelog.com/en/1.0.0/)
-
+- [Observability](https://en.wikipedia.org/wiki/Observability_(software)) with:
+  - [Prometheus](https://prometheus.io/docs/guides/go-application/)
+  - [Grafana](https://grafana.com/)
+  - [Alertmanager](https://prometheus.io/docs/alerting/latest/alertmanager/)
 
 
 <br/>
@@ -154,7 +213,4 @@ Hire artists for commercial or more elaborate projects and Learn Ingenuity!
 <!--
     I NEED TO KILL THIS APACHE 'de merda!"
         https://www.cyberciti.biz/faq/star-stop-restart-apache2-webserver/
-
-    multipart/form-data study
-        https://www.bing.com/search?q=O+que+%C3%A9+o+novo+Bing%3F&sp=-1&ghc=1&lq=1&pq=pode+me+fornecer+um+exemplo+usando+multipart%2Fform-data+e+enviando+um+html%2C+json+e+upload+de+arquivo%3Futilizando+chamada+curl&sc=2-124&qs=n&sk=&cvid=EAB9855A48BC414FAF0F8858F7687A0B&ghsh=0&ghacc=0&ghpl=&showconv=1&filters=wholepagesharingscenario%3A%22Conversation%22&shareId=dfcf626b-4299-4a2d-8884-4070a4021a84&shtc=0&shsc=Codex_ConversationMode&form=EX0050&shid=4e6956c0-b868-478f-8cf5-d2d20e312a18&shtp=GetUrl&shtk=cG9kZSBtZSBmb3JuZWNlciB1bSBleGVtcGxvIHVzYW5kbyBtdWx0aXBhcnQvZm9ybS1kYXRhIGUgZW52aWFuZG8gdW0gaHRtbCwganNvbiBlIHVwbG9hZCBkZSBhcnF1aXZvPwp1dGlsaXphbmRvIGNoYW1hZGEgY3VybA%3D%3D&shdk=QXF1aSBlc3TDoSB1bWEgcmVzcG9zdGEgcXVlIHJlY2ViaSB1c2FuZG8gbyBub3ZvIEJpbmcsIG8gcHJpbWVpcm8gbWVjYW5pc21vIGRlIHJlc3Bvc3RhIGRhIHBsYXRhZm9ybWEgQUkgZG8gbXVuZG8uIENsaXF1ZSBwYXJhIHZlciBhIHJlc3Bvc3RhIGNvbXBsZXRhIGUgZXhwZXJpbWVudGUgdm9jw6ogbWVzbW8u&shhk=l%2FGaJ2SsrzQms1Mw6jNiX0Z43IkIfjFeo7Kbe%2BmdIyU%3D&shth=OBFB.107AF8B2FB79BD01FFDCABA4D756224A
 -->
