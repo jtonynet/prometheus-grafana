@@ -38,6 +38,8 @@
 
 This project aims to study observability and Site Reliability Engineering (SRE) techniques. The purpose is purely didactic, aiming to achieve modern logging and monitoring techniques.
 
+For study and historical reasons, I am keeping the volumes of the Docker images that use this feature, committing them together with the codebase.
+
 The base application made in Java Spring was copied from the course repository and the increments for its observation and monitoring built throughout the [course study track](https://cursos.alura.com.br/formacao-sre)
 
 I must implement the knowledge acquired here in my projects and studies
