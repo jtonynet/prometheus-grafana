@@ -26,5 +26,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - We start the project [Course SRE Study Track](https://cursos.alura.com.br/formacao-sre) with initial commit and some fixes into course base archives (bootstrap of this repository).
 - Based on the course [Observability: collecting metrics from an application with Prometheus](https://cursos.alura.com.br/course/observabilidade-prometheus?preRequirementFrom=monitoramento-prometheus-grafana-alertmanager)
 
-[0.1.0]: https://github.com/jtonynet/cine-catalogo/prometheus-grafana/v0.0.0...v0.0.1
+[0.1.0]: https://github.com/jtonynet/prometheus-grafana/compare/v0.0.0...v0.1.0
 [0.0.0]: https://github.com/jtonynet/prometheus-grafana/releases/tag/v0.0.0
