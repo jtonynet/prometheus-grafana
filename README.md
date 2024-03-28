@@ -11,7 +11,7 @@
 
 ---
 
-## 🕸️ Found me in web:
+## 🕸️ Found me in web
 [![linkedin](https://img.shields.io/badge/Linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jos%C3%A9-r-99896a39/) [![dev.to](https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white)](https://dev.to/learningenuity) [![gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:learningenuity@gmail.com) [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/aromademirtilo) [![instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/learningenuity) 
 
 ---
@@ -36,7 +36,7 @@
 ---
 
 <a id="about"></a>
-## :green_book: About:
+## :green_book: About
 
 
 This project aims to study observability and Site Reliability Engineering (SRE) techniques. The purpose is purely didactic, aiming to achieve modern logging and monitoring techniques.
@@ -178,7 +178,7 @@ To use the Slack integration as seen in the "About" section, it will be necessar
 ---
 
 <a id="versions"></a>
-## :1234: Versions:
+## :1234: Versions
 
 Version tags are being created manually as studies progress with notable improvements in the project. Each feature is developed on a separate branch, and when completed, a tag is generated and merged into the master branch.
 
@@ -191,7 +191,7 @@ For more information, please refer to the [Version History](./CHANGELOG.md)
 ---
 
 <a id="ia"></a>
-## :robot: Use of AI:
+## :robot: Use of AI
 
 The header figures on this page were created with the help of artificial intelligence and a minimum of retouching and construction in Gimp [<img src="./assets/images/icons/gimp.svg" width="30" height="30 " title="Gimp" alt="Gimp Logo" />](https://www.gimp.org/)
 
